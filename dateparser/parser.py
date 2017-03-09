@@ -365,6 +365,8 @@ class _parser(object):
                                minute=time.minute,
                                second=time.second,
                                microsecond=time.microsecond))
+        else:
+            raise ValueError('time not found in the date string')
 
         return self._get_datetime_obj(**params)
 
